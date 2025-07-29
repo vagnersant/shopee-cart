@@ -1,11 +1,6 @@
 <!--START_SECTION:header-->
 <div align="center">
   <p align="center">
-    <img 
-      alt="DIO Education" 
-      src="https://raw.githubusercontent.com/digitalinnovationone/template-github-trilha/main/.github/assets/logo.webp" 
-      width="100px" 
-    />
     <h1>Recriando a lógica do carrinho de compras da Shopee</h1>
   </p>
 </div>
@@ -80,9 +75,3 @@ Após a conclusão do curso/projeto, os estudantes estarão aptos a:
 
 <br />
 <br />
-
-<p align="center">
-  <a href="https://www.dio.me/" target="_blank">
-    <img align="center" src="https://raw.githubusercontent.com/digitalinnovationone/template-github-trilha/main/.github/assets/footer.png" alt="banner"/>
-  </a>
-</p>
