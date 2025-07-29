@@ -1,16 +1,22 @@
 //quais açoes meu carrinho pode fazer
 
+import { devolutionProduct } from "./stock.js";
+
 //CASOS DE USO
 // ✅ -> adicionar item no carrinho
 async function addItem(userCart, item) {
   userCart.push(item);
 }
 
+function subTotal(product) {
+  return product.item.price * product.quantity;  
+}
+
 // ✅ -> calcular o total do carrinho
 async function calculateTotal(userCart) {
   console.log("\nShopee Cart TOTAL IS:");
 
-  const result = userCart.reduce((total, item) => total + item.subtotal(), 0);
+  const result = await userCart.reduce((total, item) => total + subTotal(item), 0);
   console.log(`🎁Total: ${result}`);
 }
 
@@ -24,9 +30,9 @@ async function deleteItem(userCart, name) {
 }
 
 // -> ✅ remover um item - diminui um item
-async function removeItem(userCart, item) {
+async function removeItem(userCart, product) {
   //1. encontrar o indice do item
-  const indexFound = userCart.findIndex((p) => p.name === item.name);
+  const indexFound = userCart.findIndex((p) => p.item.name === product.item.name);
 
   //2. Caso não encontre o item
   if (indexFound == -1) {
@@ -37,6 +43,7 @@ async function removeItem(userCart, item) {
   //3. item > 1 subtrair um item
   if (userCart[indexFound].quantity > 1) {
     userCart[indexFound].quantity -= 1;
+    await devolutionProduct(product.item, 1);
     return;
   }
 
@@ -50,11 +57,11 @@ async function removeItem(userCart, item) {
 // ✅ mostra todos os items do carrinho
 async function displaycart(userCart) {
   console.log("\nShopee cart list:");
-  userCart.forEach((item, index) => {
+  userCart.forEach((product, index) => {
     console.log(
-      `${index + 1}. ${item.name} - R$ ${item.price} | ${
-        item.quantity
-      }x | Subtotal = ${item.subtotal()}`
+      `${index + 1}. ${product.item.name} - R$ ${product.item.price} | ${
+        product.quantity
+      }x | Subtotal = ${subTotal(product)}`
     );
   });
 }

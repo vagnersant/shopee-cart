@@ -1,12 +1,15 @@
 //CASOS DE USO DOS ITENS
 
 // -> criar item com subtotal certo
-async function createItem(name, price, quantity) {
+async function createItem(id, name, price) {
   return {
+    id,
     name,
-    price,
-    quantity,
-    subtotal: () => price * quantity,
+    price
+
+    // Quantidade e subtotal() não pertencem a criação do item, e sim ao carrinho e estoque.
+    // quantity,
+    // subtotal: () => price * quantity,
   };
 }
 
