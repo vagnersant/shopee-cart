@@ -22,18 +22,16 @@ const item3 = await createItem(3, "hotwheels fusca", 49.99, 2);
 await cartService.addItem(myCart, item1);
 await cartService.addItem(myCart, item2);
 
-await stock.showStock();
-
 await cartService.removeItem(myCart, item2);
 await cartService.removeItem(myCart, item2);
-
-await stock.showStock();
 
 //await cartService.removeItem(myCart, item2);
 //await cartService.removeItem(myCart, item2);
 
 await cartService.displaycart(myCart);
 // deletei dois itens do carrinho
-// await cartService.deleteItem(myCart, item2.name);
+await cartService.deleteItem(myCart, item1);
 // await cartService.deleteItem(myCart, item1.name);
+await stock.showStock();
+
 await cartService.calculateTotal(myCart);

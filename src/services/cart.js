@@ -21,10 +21,11 @@ async function calculateTotal(userCart) {
 }
 
 // -> deletar item do carrinho
-async function deleteItem(userCart, name) {
-  const index = userCart.findIndex((item) => item.name === name);
+async function deleteItem(userCart, product) {
+  const index = userCart.findIndex((p) => p.item === product.item);
 
   if (index !== -1) {
+    await devolutionProduct(product.item, userCart[index].quantity);
     userCart.splice(index, 1);
   }
 }
@@ -32,7 +33,7 @@ async function deleteItem(userCart, name) {
 // -> ✅ remover um item - diminui um item
 async function removeItem(userCart, product) {
   //1. encontrar o indice do item
-  const indexFound = userCart.findIndex((p) => p.item.name === product.item.name);
+  const indexFound = userCart.findIndex((p) => p.item === product.item);
 
   //2. Caso não encontre o item
   if (indexFound == -1) {
@@ -50,6 +51,7 @@ async function removeItem(userCart, product) {
   //4. caso item = 1 deletar o item
   if (userCart[indexFound].quantity == 1) {
     userCart.splice(indexFound, 1);
+    await devolutionProduct(product.item, 1);
     return;
   }
 }

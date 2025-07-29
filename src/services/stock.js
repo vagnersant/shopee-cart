@@ -25,6 +25,7 @@ async function addItem(item, quantity) {
 }
 
 async function showStock() {
+    console.log ("Estoque atual-------------");
     products.forEach(product => {
         console.log (`${product.item.id} - ${product.item.name} - ${product.quantity}`)    
     });
