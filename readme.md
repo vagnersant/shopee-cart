@@ -22,32 +22,19 @@
 <thead>
   <tr>
     <td>
-        <p align="center">Felipe Aguiar</p>
-        <a href="https://github.com/felipeAguiarCode">
-        <img src="https://avatars0.githubusercontent.com/u/37452836?v=3&s=115" alt="@felipeAguiarCode"><br>
+        <p align="center">Vagner dos Santos</p>
+        <a href="https://github.com/vagnersant">
+        <img src="https://avatars.githubusercontent.com/u/30627980?s=400&u=2cc483412a2c810e349d16bc1cca22dc0735603f&v=4" alt="@vagnersant"><br>
       </a>
     </td>
     <td colspan="3">
-    <p>🎉 10y+ em sistemas comerciais com .NET C# e NODE.JS.
-      <br/>
-     🌟 Desenvolvedor fullstack - Coordenador de educação na DIO
-      <br/>
-    👨‍💻 Foco em front-ends SPA com React, Angular e Vue.js
-    </p>
       <a 
-      href="https://www.linkedin.com/in/felipe-me/" 
+      href="https://www.linkedin.com/in/o-vagnersantos/" 
       align="center">
            <img 
             align="center" 
             alt="Material de Apoio" 
             src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
-            >
-        </a>
-        <a href="https://www.instagram.com/felipeaguiar.exe/" target="_blank">
-            <img 
-              align="center" 
-              alt="Instagram" 
-              src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
             >
         </a>
     </td>
